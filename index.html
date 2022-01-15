@@ -60,14 +60,20 @@
                     <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" value="PRD" >
                     <label class="option optionPRD btn btn-outline-danger" for="option2" >Produção</label>
                 </div>
-                <input class="form-control" type="text" placeholder="Token API" aria-label="default input example">
-                <input class="form-control" type="text" placeholder="Chave de acesso NF-e / NFC-e" aria-label="default input example">
-                <input class="form-control" type="text" placeholder="Justificativa de cancelamento" aria-label="default input example">
+
+
+                <input class="form-control" type="text" placeholder="Token API" id="token-input">
+
+
+                <input class="form-control" type="text" placeholder="Chave de acesso NF-e / NFC-e" id="chave-input">
+
+
+                <input class="form-control" type="text" placeholder="Justificativa de cancelamento" id="justifica-input">
 
 
                 <div class="row last-row">
                     <div class="col last-row  storeno-div">
-                        <input class="form-control  storeno" type="number" min="0" placeholder="Número da loja" aria-label="default input example">
+                        <input class="form-control  storeno" type="number" min="0" placeholder="Número da loja" id="loja-input" >
 
                     </div>
                     <div class="col last-row submit-div">
@@ -79,6 +85,9 @@
                   <div class="progress d-none">
                       <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
                     </div>
+                    <div class="return-object">
+
+                      </div>
                 </div>
 
 
