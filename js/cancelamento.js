@@ -10,6 +10,7 @@ $(".submit-btn").click(function () {
     } else {
         url = urlPrd;
     }
+    console.log(url);
     let token = $("#token-input").val();
     let chave = $("#chave-input").val();
     let justificativa = $("#justifica-input").val();
