@@ -1,18 +1,10 @@
-var urlHm = "https://novonfeqas.avancoinfo.net"
-var urlPrd = "https://www.nerus-edoc.net"
-var url = ""
 
-$(".submit-btn").click(function () {
+$(".submit-cancelamento-btn").click(function () {
 
-    let ambiente = $('input[name="options"]:checked').val();
-    if (ambiente == "HM") {
-        url = urlHm;
-    } else {
-        url = urlPrd;
-    }
+    let url = selectAmbiente();
     console.log(url);
-    let token = $("#token-input").val();
-    let chave = $("#chave-input").val();
+    let token = $("#token-cancelamento-input").val();
+    let chave = $("#chave-cancelamento-input").val();
     let justificativa = $("#justifica-input").val();
     let storeno = $("#loja-input").val();
     let body = new Object;
@@ -28,7 +20,7 @@ $(".submit-btn").click(function () {
         headers: header,
 
         beforeSend: function () {
-            $(".progress").removeClass("d-none");
+            $(".progress-cancelamento").removeClass("d-none");
             $(".return-object").html("");
         }
     })
@@ -39,14 +31,14 @@ $(".submit-btn").click(function () {
 
                 $(".return-object").append(row);
             });
-            $(".progress").addClass("d-none");
+            $(".progress-cancelamento").addClass("d-none");
 
 
 
         })
         .fail(function (jqXHR, textStatus, msg) {
             alert(msg);
-            $(".progress").addClass("d-none");
+            $(".progress-cancelamento").addClass("d-none");
         });
 
 });
